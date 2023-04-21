@@ -1,4 +1,9 @@
-package site;
+package site.nomoreparties.stellarburgers;
+
+import site.nomoreparties.stellarburgers.Bun;
+import site.nomoreparties.stellarburgers.Burger;
+import site.nomoreparties.stellarburgers.Database;
+import site.nomoreparties.stellarburgers.Ingredient;
 
 import java.util.List;
 

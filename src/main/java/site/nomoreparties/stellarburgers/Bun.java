@@ -1,4 +1,4 @@
-package site;
+package site.nomoreparties.stellarburgers;
 
 /**
  * Модель булочки для бургера.

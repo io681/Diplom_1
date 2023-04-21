@@ -1,4 +1,4 @@
-package site;
+package site.nomoreparties.stellarburgers;
 
 import java.util.ArrayList;
 import java.util.List;

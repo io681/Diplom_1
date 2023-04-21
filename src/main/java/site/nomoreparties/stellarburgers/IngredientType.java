@@ -1,4 +1,4 @@
-package site;
+package site.nomoreparties.stellarburgers;
 
 /**
  * Перечисление с типами ингредиентов.
