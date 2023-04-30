@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
 public class BurgerTest {
     Burger burger;
     Bun bun;
-    Ingredient ingredient,ingredient2;
+    Ingredient ingredient,ingredientNext;
     @Spy
     Database databaseSpy;
     @Spy
@@ -24,7 +24,7 @@ public class BurgerTest {
     public void initData(){
         bun = databaseSpy.availableBuns().get(0);
         ingredient = databaseSpy.availableIngredients().get(0);
-        ingredient2 = databaseSpy.availableIngredients().get(1);
+        ingredientNext = databaseSpy.availableIngredients().get(1);
     }
     @Test
     public void setBunTest (){
@@ -49,13 +49,13 @@ public class BurgerTest {
     @Test
     public void moveIngredientTest (){
         burgerSpy.ingredients.add(ingredient);
-        burgerSpy.ingredients.add(ingredient2);
+        burgerSpy.ingredients.add(ingredientNext);
 
         burgerSpy.moveIngredient(0,1);
         Mockito.verify(burgerSpy, Mockito.times(1)).moveIngredient(0,1);
 
         List<Ingredient> expectedIngredients = new ArrayList<>();
-        expectedIngredients.add(ingredient2);
+        expectedIngredients.add(ingredientNext);
         expectedIngredients.add(ingredient);
 
         assertEquals("Ошибка сравнения", expectedIngredients,burgerSpy.ingredients);
